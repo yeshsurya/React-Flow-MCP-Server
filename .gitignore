@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Temporary files
+tmp/
+temp/

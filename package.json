@@ -1,0 +1,57 @@
+{
+  "name": "@anthropic/react-flow-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for React Flow library, providing AI assistants with access to React Flow components, hooks, types, utilities, and documentation.",
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "react-flow-mcp-server": "./build/index.js"
+  },
+  "files": [
+    "build/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run clean && npm run build && chmod +x build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsc && node build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "react-flow",
+    "reactflow",
+    "xyflow",
+    "flowchart",
+    "diagram",
+    "node-based",
+    "graph",
+    "visualization",
+    "ai-tools",
+    "claude"
+  ],
+  "author": "React Flow MCP Server",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyflow/react-flow-mcp-server.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "axios": "^1.8.4",
+    "zod": "^3.24.2",
+    "winston": "^3.15.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.7.2"
+  }
+}
