@@ -1,5 +1,5 @@
 {
-  "name": "@anthropic/react-flow-mcp-server",
+  "name": "@yeshsurya/react-flow-mcp-server",
   "version": "1.0.0",
   "description": "A Model Context Protocol (MCP) server for React Flow library, providing AI assistants with access to React Flow components, hooks, types, utilities, and documentation.",
   "type": "module",

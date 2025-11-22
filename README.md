@@ -14,13 +14,13 @@ A Model Context Protocol (MCP) server for the [React Flow](https://reactflow.dev
 ## Installation
 
 ```bash
-npm install @anthropic/react-flow-mcp-server
+npm install @yeshsurya/react-flow-mcp-server
 ```
 
 Or run directly with npx:
 
 ```bash
-npx @anthropic/react-flow-mcp-server
+npx @yeshsurya/react-flow-mcp-server
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ Add to your MCP client configuration:
   "mcpServers": {
     "react-flow": {
       "command": "npx",
-      "args": ["@anthropic/react-flow-mcp-server"]
+      "args": ["@yeshsurya/react-flow-mcp-server"]
     }
   }
 }
