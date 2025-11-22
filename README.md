@@ -25,16 +25,52 @@ npx @yeshsurya/react-flow-mcp-server
 
 ## Usage
 
-### As an MCP Server
+### Claude Desktop / Claude Code
 
-Add to your MCP client configuration:
+Add the MCP server using the Claude CLI:
+
+```bash
+claude mcp add react-flow -- npx -y @yeshsurya/react-flow-mcp-server
+```
+
+Or manually add to your MCP client configuration file:
 
 ```json
 {
   "mcpServers": {
     "react-flow": {
       "command": "npx",
-      "args": ["@yeshsurya/react-flow-mcp-server"]
+      "args": ["-y", "@yeshsurya/react-flow-mcp-server"]
+    }
+  }
+}
+```
+
+### Microsoft Copilot Studio
+
+MCP is now [generally available in Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/model-context-protocol-mcp-is-now-generally-available-in-microsoft-copilot-studio/). To add this server:
+
+1. Navigate to your agent's **Tools** page in Copilot Studio
+2. Select **Add a tool** → **New tool** → **Model Context Protocol**
+3. Configure the server:
+   - **Server name**: `react-flow-mcp-server`
+   - **Server description**: `Provides React Flow components, hooks, types, utilities, examples, and documentation`
+   - **Server URL**: Deploy the server to a hosting service (Azure, AWS, etc.) with HTTP transport
+4. Choose authentication type (None, API key, or OAuth 2.0)
+5. Create connection and add to your agent
+
+> **Note**: Copilot Studio requires **Streamable HTTP transport**. For local development, consider using a tunneling service or deploying to a cloud endpoint. See [Microsoft's MCP documentation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/mcp-add-existing-server-to-agent) for detailed setup instructions.
+
+### VS Code / GitHub Copilot
+
+MCP is supported in VS Code and GitHub Copilot. Add to your VS Code settings:
+
+```json
+{
+  "mcp.servers": {
+    "react-flow": {
+      "command": "npx",
+      "args": ["-y", "@yeshsurya/react-flow-mcp-server"]
     }
   }
 }
@@ -43,8 +79,8 @@ Add to your MCP client configuration:
 ### Command Line Options
 
 ```bash
-npx react-flow-mcp-server --help     # Show help
-npx react-flow-mcp-server --version  # Show version
+npx @yeshsurya/react-flow-mcp-server --help     # Show help
+npx @yeshsurya/react-flow-mcp-server --version  # Show version
 ```
 
 ### Environment Variables
